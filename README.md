@@ -4,10 +4,52 @@
   <a href="#english">English</a> | <a href="#chinese">中文</a>
 </p>
 
----
+***
 
 <a name="english"></a>
+
 ## 🇺🇸 English
+
+### 🔰 Beginner's Guide (No Experience Required)
+
+Never used Python or command line tools? Follow these steps:
+
+#### Step 1: Download This Project
+
+**Option A: Download ZIP (Easiest)**
+
+1. Click the green **"<> Code"** button at the top of this page
+2. Click **"Download ZIP"**
+3. Unzip the downloaded file to your Desktop or any folder you like
+
+**Option B: Use Git (If you have git installed)**
+
+```bash
+git clone https://github.com/your-repo/excel-Link-extract-downloader.git
+```
+
+#### Step 2: Open Terminal in the Folder
+
+**Windows:**
+
+1. Navigate to the unzipped folder in File Explorer
+2. Click in the address bar at the top
+3. Type `cmd` and press Enter
+4. A terminal window opens with the correct folder location
+
+**macOS:**
+1. Open Terminal (press `Cmd+Space`, type "Terminal", press Enter)
+2. Type `cd ` (with a space), then drag the project folder into the Terminal window
+3. Press Enter - you're now in the project folder!
+
+**Alternative (Both OS):**
+- Press `Ctrl+Shift+`` ` (backtick) in VS Code with the folder open
+
+#### Step 3: Follow the Quick Start Below
+
+Once your terminal is open in the project folder, continue with "Quick Start" section below.
+
+***
 
 A practical tool for batch extracting links from Excel spreadsheets and downloading them using aria2 multi-threaded downloader.
 
@@ -59,6 +101,7 @@ python name_method_init.py
 ```
 
 Features:
+
 - Auto-detect `.xlsx` files in current directory
 - Two naming methods:
   - **Row-based**: Each row corresponds to a person. Select a column (e.g., column with names), and the cell content in that column will be used as the filename prefix for all files in that row
@@ -66,11 +109,13 @@ Features:
 - Generates `naming_config.json` configuration file
 
 How it works:
+
 1. Choose naming method: Row-based or Column-based
 2. Select reference column/row: Specify which column (for row-based) or row (for column-based) contains the identifier (e.g., name, ID)
 3. The tool uses the cell content from the selected column/row as the filename prefix
 
 Example:
+
 - Select row-based naming with column 3 (Name column) as reference → Files in row 2 will be named: `John-1.jpg`, `John-2.jpg`
 - If cell C2 contains "John", all downloaded files from row 2 will start with "John-"
 
@@ -83,12 +128,14 @@ python extract_links.py
 ```
 
 Features:
+
 - Auto-reads `naming_config.json` configuration
 - Traverses all cells to extract URLs (hyperlinks and text URLs)
 - Generates filenames with prefixes based on naming config
 - Outputs `aria2_links.txt` (aria2-compatible download list)
 
 Optional parameters:
+
 ```bash
 python extract_links.py "your_file.xlsx"    # Specify input file
 python extract_links.py --check              # Check link accessibility
@@ -104,26 +151,28 @@ python finalstep_downloader.py
 ```
 
 Features:
+
 - Auto-detects aria2c environment
 - Reads `aria2_links.txt` file
 - Interactive download directory selection
 - Batch download with resume support
 
 Download features:
+
 - Multi-threaded concurrent download (default 5 threads)
 - Auto-renames files according to naming configuration
 - Supports resume, can be interrupted and continued anytime
 
 ### File Structure
 
-| File | Description |
-|------|-------------|
-| `name_method_init.py` | Step 1: Configure naming method |
-| `extract_links.py` | Step 2: Extract download links |
-| `finalstep_downloader.py` | Step 3: Execute download |
-| `naming_config.json` | Naming config (auto-generated) |
-| `aria2_links.txt` | Download list (auto-generated) |
-| `example.xlsx` | Example Excel file |
+| File                      | Description                     |
+| ------------------------- | ------------------------------- |
+| `name_method_init.py`     | Step 1: Configure naming method |
+| `extract_links.py`        | Step 2: Extract download links  |
+| `finalstep_downloader.py` | Step 3: Execute download        |
+| `naming_config.json`      | Naming config (auto-generated)  |
+| `aria2_links.txt`         | Download list (auto-generated)  |
+| `example.xlsx`            | Example Excel file              |
 
 ### Use Cases
 
@@ -138,10 +187,53 @@ Download features:
 3. Ensure aria2c is installed and added to system PATH
 4. Downloaded files will be auto-renamed according to naming configuration
 
----
+***
 
 <a name="chinese"></a>
+
 ## 🇨🇳 中文
+
+### 🔰 零基础指南
+
+从没用过 Python 或命令行工具？按下面步骤操作：
+
+#### 第一步：下载本项目
+
+**方式 A：下载 ZIP（最简单）**
+
+1. 点击本页面顶部的绿色 **"<> Code"** 按钮
+2. 点击 **"Download ZIP"**
+3. 将下载的压缩包解压到桌面或任意你喜欢的文件夹
+
+**方式 B：使用 Git（如果你已安装 git）**
+
+```bash
+git clone https://github.com/your-repo/excel-Link-extract-downloader.git
+```
+
+#### 第二步：在文件夹中打开终端
+
+**Windows 系统：**
+
+1. 在文件资源管理器中进入解压后的文件夹
+2. 点击顶部地址栏
+3. 输入 `cmd` 然后按回车
+4. 终端窗口会自动打开，并且已经在正确的文件夹位置
+
+**macOS 系统：**
+1. 打开终端（按 `Cmd+Space`，输入 "Terminal"，按回车）
+2. 输入 `cd `（注意有个空格），然后从 Finder 中把项目文件夹拖进终端窗口（如果你使用 git clone 命令，则可以直接 cd excel-Link-extract-downloader）
+3. 按回车 - 你已经进入项目文件夹了！
+
+**其他方式（两种系统都适用）：**
+
+- 在 VS Code 中打开该文件夹，按 `Ctrl+Shift+`` ` （反引号键）
+
+#### 第三步：继续下面的快速开始
+
+终端在正确的文件夹中打开后，继续阅读下面的"快速开始"部分。
+
+***
 
 一个用于从 Excel 表格中批量提取链接并使用 aria2 多线程下载的实用工具。
 
@@ -193,6 +285,7 @@ python name_method_init.py
 ```
 
 功能说明：
+
 - 自动检测当前目录下的 `.xlsx` 文件
 - 支持两种命名方式：
   - **行命名**：每行对应一个人。选择某一列（如姓名列），该列的单元格内容将作为对应行所有下载文件的文件名前缀
@@ -200,11 +293,13 @@ python name_method_init.py
 - 生成 `naming_config.json` 配置文件
 
 工作原理：
+
 1. 选择命名方式：行命名或列命名
 2. 指定参考列/行：选择包含标识信息（如姓名、编号）的列（行命名时）或行（列命名时）
 3. 工具将使用所选列/行中的单元格内容作为文件名前缀
 
 示例：
+
 - 选择行命名，以第3列（姓名列）作为参考列 → 第2行的文件将被命名为：`张三-1.jpg`, `张三-2.jpg`
 - 如果 C2 单元格内容为"张三"，则第2行所有下载的文件名都会以"张三-"开头
 
@@ -217,12 +312,14 @@ python extract_links.py
 ```
 
 功能说明：
+
 - 自动读取 `naming_config.json` 配置
 - 遍历 Excel 中的所有单元格，提取 URL（包括超链接和文本中的 URL）
 - 根据命名配置生成带前缀的文件名
 - 输出 `aria2_links.txt` 文件（aria2 可用的下载列表格式）
 
 可选参数：
+
 ```bash
 python extract_links.py "你的文件.xlsx"    # 指定输入文件
 python extract_links.py --check              # 检查链接可达性
@@ -238,26 +335,28 @@ python finalstep_downloader.py
 ```
 
 功能说明：
+
 - 自动检测 aria2c 环境
 - 读取 `aria2_links.txt` 文件
 - 交互式选择下载目录
 - 使用 aria2 批量下载，支持断点续传
 
 下载特性：
+
 - 多线程并发下载（默认 5 线程）
 - 自动按命名配置重命名文件
 - 支持断点续传，可随时中断继续
 
 ### 文件说明
 
-| 文件 | 说明 |
-|------|------|
-| `name_method_init.py` | 第一步：配置命名方法 |
-| `extract_links.py` | 第二步：提取下载链接 |
-| `finalstep_downloader.py` | 第三步：执行下载 |
-| `naming_config.json` | 命名配置（自动生成） |
-| `aria2_links.txt` | 下载列表（自动生成） |
-| `example.xlsx` | 示例 Excel 文件 |
+| 文件                        | 说明          |
+| ------------------------- | ----------- |
+| `name_method_init.py`     | 第一步：配置命名方法  |
+| `extract_links.py`        | 第二步：提取下载链接  |
+| `finalstep_downloader.py` | 第三步：执行下载    |
+| `naming_config.json`      | 命名配置（自动生成）  |
+| `aria2_links.txt`         | 下载列表（自动生成）  |
+| `example.xlsx`            | 示例 Excel 文件 |
 
 ### 使用场景
 
@@ -272,7 +371,7 @@ python finalstep_downloader.py
 3. 确保 aria2c 已安装并添加到系统 PATH
 4. 下载的文件会按命名配置自动重命名
 
----
+***
 
 ## License | 许可证
 
