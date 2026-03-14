@@ -61,12 +61,18 @@ python name_method_init.py
 Features:
 - Auto-detect `.xlsx` files in current directory
 - Two naming methods:
-  - **Row-based**: Each row corresponds to a person, use specified column as filename prefix
-  - **Column-based**: Each column corresponds to a person, use specified row as filename prefix
+  - **Row-based**: Each row corresponds to a person. Select a column (e.g., column with names), and the cell content in that column will be used as the filename prefix for all files in that row
+  - **Column-based**: Each column corresponds to a person. Select a row (e.g., row with names), and the cell content in that row will be used as the filename prefix for all files in that column
 - Generates `naming_config.json` configuration file
 
+How it works:
+1. Choose naming method: Row-based or Column-based
+2. Select reference column/row: Specify which column (for row-based) or row (for column-based) contains the identifier (e.g., name, ID)
+3. The tool uses the cell content from the selected column/row as the filename prefix
+
 Example:
-- Select row-based naming with name in column 3 → Filenames: `John-1.jpg`, `John-2.jpg`
+- Select row-based naming with column 3 (Name column) as reference → Files in row 2 will be named: `John-1.jpg`, `John-2.jpg`
+- If cell C2 contains "John", all downloaded files from row 2 will start with "John-"
 
 **Step 2: Extract Download Links**
 
