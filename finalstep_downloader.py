@@ -117,9 +117,12 @@ def get_download_directory():
     """询问用户文件保存位置"""
     print("\n=== 第三步：选择文件保存位置 ===")
     print("请输入下载文件的保存目录")
-    print("提示: 可以直接拖入需要保存到的文件夹，或直接回车使用当前目录")
+    print("提示: 可以直接拖入需要保存到的文件夹，或直接回车使用默认目录")
     
-    default_dir = os.getcwd()
+    # 默认下载目录：项目文件夹/DownloadedFiles
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    default_dir = os.path.join(script_dir, "DownloadedFiles")
+    
     download_dir = input(f"保存目录 (默认: {default_dir}): ").strip()
     
     if not download_dir:
