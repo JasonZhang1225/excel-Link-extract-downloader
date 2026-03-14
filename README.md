@@ -21,12 +21,12 @@ A practical tool for batch extracting links from Excel spreadsheets and download
 
 ### Prerequisites
 
-- Python 3.9+
+- Python 3.9+ Recommend
 - aria2 downloader
 
 #### Install aria2
 
-- **macOS**: `brew install aria2`
+- **macOS (with Homebrew installed)**: `brew install aria2`
 - **Windows**: Download from [aria2 releases](https://github.com/aria2/aria2/releases) and add to PATH
 - **Linux**: `sudo apt install aria2` or `sudo yum install aria2`
 
@@ -155,12 +155,12 @@ Download features:
 
 ### 前期准备
 
-- Python 3.9+
+- 推荐Python 3.9+
 - aria2 下载工具
 
 #### 安装 aria2
 
-- **macOS**: `brew install aria2`
+- **macOS(已安装 Homebrew)**: `brew install aria2`
 - **Windows**: 从 [aria2 releases](https://github.com/aria2/aria2/releases) 下载并添加到 PATH
 - **Linux**: `sudo apt install aria2` 或 `sudo yum install aria2`
 
