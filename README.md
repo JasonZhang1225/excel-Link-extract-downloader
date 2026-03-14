@@ -2,14 +2,22 @@
 
 从 Excel 表格中批量提取链接并使用 aria2 下载的工具。
 
+## 功能特点
+
+- 三步式工作流程，简单高效
+- 支持行/列两种命名方式，灵活配置文件名
+- 自动提取超链接和文本中的 URL
+- 使用 aria2 多线程下载，支持断点续传
+- 交互式操作，无需记忆复杂命令
+
 ## 前期准备
 
-- Python 3.10+ 环境
+- 推荐使用Python 3.9+ 环境
 - aria2 下载工具
 
 ### 安装 aria2
 
-- **macOS**: `brew install aria2`
+- **macOS**: 预先安装了 homebrew 的情况下，直接执行 `brew install aria2`
 - **Windows**: 从 [aria2 releases](https://github.com/aria2/aria2/releases) 下载并添加到 PATH
 - **Linux**: `sudo apt install aria2` 或 `sudo yum install aria2`
 
@@ -17,7 +25,7 @@
 
 ### 1. 创建虚拟环境并安装依赖
 
-注意首先打开终端，进入到本项目文件夹
+注意首先打开终端，进入到本项目目录
 
 ```bash
 # 创建虚拟环境
