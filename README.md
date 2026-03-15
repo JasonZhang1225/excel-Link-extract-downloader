@@ -25,7 +25,7 @@ Never used Python or command line tools? Follow these steps:
 **Option B: Use Git (If you have git installed)**
 
 ```bash
-git clone https://github.com/your-repo/excel-Link-extract-downloader.git
+git clone https://github.com/JasonZhang1225/excel-Link-extract-downloader.git
 ```
 
 #### Step 2: Open Terminal in the Folder
@@ -208,7 +208,7 @@ Download features:
 **方式 B：使用 Git（如果你已安装 git）**
 
 ```bash
-git clone https://github.com/your-repo/excel-Link-extract-downloader.git
+git clone https://github.com/JasonZhang1225/excel-Link-extract-downloader.git
 ```
 
 #### 第二步：在文件夹中打开终端
